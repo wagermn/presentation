@@ -2,6 +2,5 @@
 
 
 
-## 幂函数的导数公式
-
-\[ \frac{\mathrm{d}}{\mathrm{d}x} x^a = a x^{a-1} \]
+## 
+$$ \frac{\mathrm{d}}{\mathrm{d}x} x^a = a x^{a-1} $$

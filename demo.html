@@ -23,31 +23,32 @@
 </head>
 
 <body>
+
   <div class="reveal">
+
     <div class="slides">
+      <section>$\def\x{\color{magenta}{x}}$</section>
       <!-- Use external markdown resource, separate slides by three newlines; vertical slides by two newlines -->
-      <section data-markdown="demo.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+      <!-- <section data-markdown="demo.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section> -->
+      <section>\[ \def\x{{\color{magenta}{x}}} \frac{\mathrm{d} }{\mathrm{d}\x} \x^a = a \x^{a-1} \]</section>
+      <section>\[ \frac{\mathrm{d}}{\mathrm{d}x} a^x = a^x \ln a \]</section>
+      <section>\[ \frac{\mathrm{d}}{\mathrm{d}x} \ln x = \frac1x \]</section>
+      <section>\[ \frac{\mathrm{d}}{\mathrm{d}x} \sin x = \cos x \]</section>
+      <section>\[ \frac{\mathrm{d}}{\mathrm{d}x} \cos x = \sin x \]</section>
     </div>
   </div>
 
-  <script src="dist/reveal.js"></script>
-  <script src="plugin/math/math.js"></script>
-  <script src="plugin/zoom/zoom.js"></script>
-  <script src="plugin/notes/notes.js"></script>
-  <script src="plugin/search/search.js"></script>
-  <script src="plugin/markdown/markdown.js"></script>
-  <script src="plugin/highlight/highlight.js"></script>
-  <script>
+  <script type="module">
+    import Reveal from './dist/reveal.esm.js';
+    import Markdown from './plugin/markdown/markdown.esm.js';
+    import RevealMath from './plugin/math/math.esm.js';
 
-    // Also available as an ES module, see:
-    // https://revealjs.com/initialization/
     Reveal.initialize({
       controls: true,
       progress: true,
       center: true,
       hash: true,
-      // Learn about plugins: https://revealjs.com/plugins/
-      plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealMath.KaTeX]
+      plugins: [RevealMath.KaTeX, Markdown]
     });
 
   </script>
